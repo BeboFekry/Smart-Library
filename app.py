@@ -104,16 +104,16 @@ for m in st.session_state.messages:
     # st.write("---")
 
 if len(st.session_state.messages)==1:
-    st.chat_message("test", avatar="images/chatbot-avataer.png").markdown('أهلا, اقدر اساعدك ازاي؟')
+    st.chat_message("assistant", avatar="images/icon.png").markdown('أهلا, اقدر اساعدك ازاي؟')
 
 message = st.chat_input("Say something")
 
 if message is None:
     pass
 else:
-    st.chat_message("user", avatar="images/person avataer.png").markdown(message)
+    st.chat_message("user").markdown(message)
     answer = chatting(message=message)
-    st.chat_message("assistant", avatar="images/chatbot avataer.png").markdown(answer)
+    st.chat_message("assistant").markdown(answer)
 
 if bt_file:
     if file is not None:
