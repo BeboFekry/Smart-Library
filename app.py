@@ -111,7 +111,7 @@ message = st.chat_input("Say something")
 if message is None:
     pass
 else:
-    st.chat_message("user").markdown(message)
+    st.chat_message("user", avatar="images/person avataer.png").markdown(message)
     answer = chatting(message=message)
     st.chat_message("assistant").markdown(answer)
 
