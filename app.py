@@ -98,9 +98,9 @@ for m in st.session_state.messages:
     if m.type == "system":
         continue
     if m.type == "human":
-        st.chat_message("user").markdown(m.content)
+        st.chat_message("user", avatar="images/person_avataer.png").markdown(m.content)
     else:
-        st.chat_message("assistant").markdown(m.content)
+        st.chat_message("assistant", avatar="images/chatbot_avataer.png").markdown(m.content)
     # st.write("---")
 
 if len(st.session_state.messages)==1:
