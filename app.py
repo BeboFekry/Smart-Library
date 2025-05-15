@@ -8,7 +8,7 @@ import requests
 
 API = st.secrets["API"]
 
-st.set_page_config(page_title="Waraq Chatbot", page_icon='images/icon.png')
+st.set_page_config(page_title="Waraq Bot", page_icon='images/icon.png')
 
 if "messages" not in st.session_state:
     st.session_state.messages = [
