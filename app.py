@@ -98,13 +98,13 @@ for m in st.session_state.messages:
     if m.type == "system":
         continue
     if m.type == "human":
-        st.chat_message("user", avatar="images/person_avataer.png").markdown(m.content)
+        st.chat_message("user").markdown(m.content)
     else:
-        st.chat_message("assistant", avatar="images/chatbot_avataer.png").markdown(m.content)
+        st.chat_message("assistant").markdown(m.content)
     # st.write("---")
 
 if len(st.session_state.messages)==1:
-    st.chat_message("assistant", avatar="images/chatbot_avatar.png").markdown('أهلا, اقدر اساعدك ازاي؟')
+    st.chat_message("assistant").markdown('أهلا, اقدر اساعدك ازاي؟')
 
 message = st.chat_input("Say something")
 
