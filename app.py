@@ -113,7 +113,7 @@ if message is None:
 else:
     st.chat_message("user", avatar="images/person avataer.png").markdown(message)
     answer = chatting(message=message)
-    st.chat_message("assistant").markdown(answer)
+    st.chat_message("assistant", avatar="images/chatbot avataer.png").markdown(answer)
 
 if bt_file:
     if file is not None:
