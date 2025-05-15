@@ -12,7 +12,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         SystemMessage(content="""you are a helpfull AI assistant with main task to summarize books, documents and articles.
     your name is Octobot.
-    you are a smart chatbot a part of Smary Library website system.
+    you are a smart chatbot a part of Smart Library website system.
     you are developed by 'Waraq team' or "فريق ورق".
     you will take a text and summarize it to focus on the important topics. Summarize the book, add summary at the end, then add Question and Asnwers on it.
     you may get questions on the summarized topice you need you answer all of them.
@@ -69,22 +69,12 @@ st.columns([1,1,1])[1].image("images/chatbot.png")
 st.columns([1,1,1])[1].image("images/horizontal2.png")
 
 
-# st.header("Octobot")
 st.info("Easy Summarize your text documents, Web contents, LinkedIn posts, pdf, and text files...")
 st.write("---")
-
-# for m in st.session_state.messages:
-#     with st.chat_message(m['role']):
-#         st.markdown(m['content'])
 
 HORIZONTAL_RED = "images/horizontal.png"
 ICON_RED = "images/icon.png"
 
-# options = [HORIZONTAL_RED, ICON_RED]
-# sidebar_logo = st.selectbox("Sidebar logo", options, 0)
-# main_body_logo = st.selectbox("Main body logo", options, 1)
-
-# st.write(st.__version__)
 st.logo("images/horizontal2.png", icon_image="images/icon.png")
 
 
@@ -103,8 +93,8 @@ for m in st.session_state.messages:
         st.chat_message("user").markdown(m.content)
     else:
         st.chat_message("assistant").markdown(m.content)
-    st.write("---")
-    
+    # st.write("---")
+
 if len(st.session_state.messages)==1:
     st.chat_message("assistant").markdown('أهلا, اقدر اساعدك ازاي؟')
 
