@@ -6,7 +6,7 @@ from langchain.document_loaders import PDFPlumberLoader, TextLoader
 import requests
 # import validators
 
-API = "AIzaSyCaPzDUJujNjXa8r2wQ5P0RCHlTMXJc5zE"
+API = st.secrets["API"]
 
 if "messages" not in st.session_state:
     st.session_state.messages = [
