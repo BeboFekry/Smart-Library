@@ -104,7 +104,8 @@ for m in st.session_state.messages:
     # st.write("---")
 
 if len(st.session_state.messages)==1:
-    st.chat_message("assistant",* , avatar="images/chatbot-avataer.png").markdown('أهلا, اقدر اساعدك ازاي؟')
+    img = "images/chatbot-avataer.png"
+    st.chat_message("assistant", avatar=img).markdown('أهلا, اقدر اساعدك ازاي؟')
 
 message = st.chat_input("Say something")
 
