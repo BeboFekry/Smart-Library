@@ -8,6 +8,8 @@ import requests
 
 API = st.secrets["API"]
 
+st.set_page_config(page_title="Chatbot", page_icon='images/chatbot.png')
+
 if "messages" not in st.session_state:
     st.session_state.messages = [
         SystemMessage(content="""you are a helpfull AI assistant with main tasks:
